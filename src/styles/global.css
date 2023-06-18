@@ -1,0 +1,104 @@
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:700,300,400');
+@import url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+@import url('http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css');
+
+/* General */
+body {/*padding-top: 50px;*/ font-family: 'Open Sans', Helvetica, sans-serif;}
+main { padding-top: 50px; }
+a {}
+a:hover, a:focus {}
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {outline: none;}
+.bold {font-weight: bold}
+@media (max-width: 767px) {
+  body h1 {font-size: 28px;}
+  body h2 {font-size: 24px}
+  body h3 {font-size: 20px}
+}
+
+nav.navbar {margin-bottom: 0;}
+nav.navbar-default {border-color: #448B44;}
+nav.navbar-default .navbar-brand {color: #448B44; font-weight: bold;}
+nav.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover
+{background-color: #448B44; color: #fff;}
+nav.navbar-default .navbar-brand:focus, nav.navbar-default .navbar-brand:hover {color: #449d44;}
+
+
+/* HOME PAGE */
+
+/* Hero */
+section.hero {position: relative}
+@media (max-width: 767px) {
+  section.hero {background: url('/images/earth.jpg') center top no-repeat; /*background: #111;*/ background-size: 100%; height: 350px; height: 55vw;}
+}
+@media (min-width: 767px) {
+  section.hero {background: url('/images/earth.jpg') center top fixed no-repeat; /*background: #111;*/ background-size: 100%; height: 450px; height: 50vw;}
+}
+section.hero iframe {width: 100%; height: 100%}
+
+/* Banner */
+section.banner {position: relative; top: -50px; width: 75%; margin: 0 auto; padding: 0; background-color: #448B44; background: /*url('../texture.png'),*/ #448B44; color: #fff;}
+section.banner h1 {line-height: 125%; margin: 0; padding: 3%; font-size: 24px; font-weight: bold; color: #fff;}
+section.banner .secondary {font-weight: 400; font-style: italic}
+@media (max-width: 767px) {
+  section.banner {position: static; width: 100%}
+  section.banner h1, section.banner .secondary {font-size: 18px}
+}
+
+section.statement {padding: 4% 0 4% 0;}
+section.statement h2 {font-weight: bold; color: #2C4C67; border-bottom: 1px solid #ccc;display: inline-block;padding-bottom: 20px;}
+section.statement p {font-size: 18px; padding-top: 10px;}
+
+section.info {padding: 50px 0;}
+section.info .glyphicon {font-size: 36px}
+	div.features div {padding: 2%; border: 1px solid #ddd}
+	/*div.features figure {height: 80px; background: url('../install.jpg') center center no-repeat; background-size: 100% 100%;}*/
+	div.features button {background-color: #448B44; margin-top: 5px;}
+@media (min-width: 992px) {
+	div.features p {height: 100px; overflow: hidden}
+	div.features div {margin: 0 4%; height: 300px;}
+}
+@media (max-width: 991px) {
+	div.features div {margin-bottom: 20px; padding: 5%;}
+}
+
+section.store {
+	padding: 4% 0 0 0; 
+	background-color: #448B44; 
+	background: url('/images/illustration.jpg') center bottom no-repeat;
+	background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.8)),url('/images/loop.jpg') fixed center bottom no-repeat; 
+	background-size: 100% 90%;
+	color: #fff;
+}
+@media (max-width: 992px) {
+	section.store {
+	  background: url('/images/illustration.jpg') center bottom no-repeat;	
+	  background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.8)),url('/images/loop.jpg') center bottom no-repeat; 
+	  background-size: 100% 100%;
+	}
+}
+section.store h2 {font-weight: bold;}
+section.store p {padding: 2% 0; font-size: 18px; font-weight: 400; color: #ccc;}
+section.store button {background-color: transparent; color: #fff;}
+section.store footer {margin: 5% 0 0 0; background: #fff; border-bottom: 1px solid #ccc;}
+section.store footer img {margin: 5% 0;}
+
+footer.final {width: 100%; min-height: 100px; background-color: #000; padding-top: 50px;}
+footer a {color: #fff;}
+footer .copy a:hover {color: white; text-decoration: none}
+footer .social a:hover {color: #448B44;}
+footer p {font-size: 12px; color: #fff;}
+footer i.fa {font-size: 22px;}
+
+
+/* Additional Pages */
+
+section.content {padding: 4% 0 4% 0;}
+section.content h1 {font-weight: bold; color: #448B44; border-bottom: 1px solid #ccc;display: inline-block;padding-bottom: 20px;}
+section.content p {font-size: 16px; padding-top: 10px;}
+section.content ul.nav {margin-bottom: 20px;}
+section.content ul li {font-size: 16px}
+section.content ul.resources li {margin: 5px 0;}
+section.content #accordion {margin-top: 25px;}
+section.content form {margin: 5% 0;}
+@media (min-width: 767px) { section.content .address {text-align: center;} }
+@media (max-width: 480px) { section.content ul.nav li {float: none;} }
