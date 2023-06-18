@@ -104,7 +104,7 @@ const Layout = ({ children }: LayoutProps) => {
         </div>
       </footer>
       <Script id="jquery" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" onLoad={() => setLoaded(true)} />
-      {loaded && <Script id="bootstrap" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js" />}
+      {loaded && <Script id="bootstrap" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js" />}
     </>
   )
 }
