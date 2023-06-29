@@ -10,7 +10,6 @@ const AboutPage: React.FC<PageProps> = () => {
     return re.test(email);
   };
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
     const form = document.querySelector('form');
     if (!form) return;
     const formError = form.querySelector('.error');
@@ -19,12 +18,12 @@ const AboutPage: React.FC<PageProps> = () => {
     const formEmail = document.getElementById('email') as HTMLInputElement;
     const formMsg = document.getElementById('message') as HTMLTextAreaElement;
     const formHuman = document.getElementById('human') as HTMLInputElement;
-    if (!formName.value) return formName.classList.add('error');
-    if (!validateEmail(formEmail.value)) return formEmail.classList.add('error');
-    if (!formMsg.value) return formMsg.classList.add('error');
-    if (formHuman.value !== '5') return formHuman.classList.add('error');
-    console.log('submit');
-    form.classList.add('submitted');
+    if (!formName.value) formName.classList.add('error');
+    else if (!validateEmail(formEmail.value)) formEmail.classList.add('error');
+    else if (!formMsg.value) formMsg.classList.add('error');
+    else if (formHuman.value !== '5') formHuman.classList.add('error');
+    else return form.classList.add('submitted');
+    e.preventDefault();
   };
 
   return (
@@ -41,7 +40,7 @@ const AboutPage: React.FC<PageProps> = () => {
             <div className='col-md-10 col-md-offset-1'>
               <h1>Contact</h1>
               <p>Please feel free to send us a message or reach us by phone with the office listings below.</p>
-              <form className="form-horizontal" role="form" onSubmit={handleSubmit} data-netlify="true" name="contact-form">
+              <form className="form-horizontal" data-netlify="true" method="POST" name="contact-form" onSubmit={handleSubmit} role="form">
                 <div className="form-group">
                     <label htmlFor="name" className="col-sm-2 control-label">Name</label>
                     <div className="col-sm-10">
