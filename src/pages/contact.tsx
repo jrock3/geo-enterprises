@@ -41,7 +41,7 @@ const AboutPage: React.FC<PageProps> = () => {
             <div className='col-md-10 col-md-offset-1'>
               <h1>Contact</h1>
               <p>Please feel free to send us a message or reach us by phone with the office listings below.</p>
-              <form className="form-horizontal" role="form" onSubmit={handleSubmit}>
+              <form className="form-horizontal" role="form" onSubmit={handleSubmit} data-netlify="true" name="contact-form">
                 <div className="form-group">
                     <label htmlFor="name" className="col-sm-2 control-label">Name</label>
                     <div className="col-sm-10">
