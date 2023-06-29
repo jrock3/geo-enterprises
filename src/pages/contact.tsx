@@ -40,7 +40,8 @@ const AboutPage: React.FC<PageProps> = () => {
             <div className='col-md-10 col-md-offset-1'>
               <h1>Contact</h1>
               <p>Please feel free to send us a message or reach us by phone with the office listings below.</p>
-              <form className="form-horizontal" data-netlify="true" method="POST" name="contact-form" onSubmit={handleSubmit} role="form">
+              <form className="form-horizontal" data-netlify="true" name="contact-form" onSubmit={handleSubmit} role="form">
+                <input type="hidden" name="form-name" value="contact-form" />
                 <div className="form-group">
                     <label htmlFor="name" className="col-sm-2 control-label">Name</label>
                     <div className="col-sm-10">
@@ -67,7 +68,7 @@ const AboutPage: React.FC<PageProps> = () => {
                 </div>
                 <div className="form-group">
                     <div className="col-sm-10 col-sm-offset-2">
-                        <input id="submit" name="submit" type="submit" value="Send" className="btn btn-primary"/>
+                        <button id="submit" name="submit" type="submit" value="Send" className="btn btn-primary">Send</button>
                     </div>
                 </div>
                 <div className="form-group thank-you">
