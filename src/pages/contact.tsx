@@ -33,14 +33,13 @@ const AboutPage: React.FC<PageProps> = () => {
           <div className='row'>
             <div className='col-md-10 col-md-offset-1'>
               <StaticImage src="../../static/images/contact.jpg" alt="" />
-              {/*<img className='' src='' style={{ width: '100%' }}/>*/}
             </div>
           </div>
           <div className='row' style={{ paddingTop: '4%' }}>
             <div className='col-md-10 col-md-offset-1'>
               <h1>Contact</h1>
               <p>Please feel free to send us a message or reach us by phone with the office listings below.</p>
-              <form className="form-horizontal" data-netlify="true" name="contact-form" onSubmit={handleSubmit} role="form">
+              <form className="form-horizontal" data-netlify="true" data-netlify-honeypot="bot-field" method="post" name="contact-form" onSubmit={handleSubmit} role="form">
                 <input type="hidden" name="form-name" value="contact-form" />
                 <div className="form-group">
                     <label htmlFor="name" className="col-sm-2 control-label">Name</label>
@@ -48,6 +47,11 @@ const AboutPage: React.FC<PageProps> = () => {
                         <input type="text" className="form-control" id="name" name="name" placeholder="First & Last Name"/>
                     </div>
                 </div>
+                <p hidden>
+                  <label>
+                    Don't fill this out: <input name="bot-field" />
+                  </label>
+                </p>
                 <div className="form-group">
                     <label htmlFor="email" className="col-sm-2 control-label">Email</label>
                     <div className="col-sm-10">
