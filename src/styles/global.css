@@ -18,7 +18,7 @@ a:hover, a:focus {}
 nav.navbar {margin-bottom: 0;}
 nav.navbar-default {border-color: #448B44;}
 nav.navbar-default .navbar-brand {color: #448B44; font-weight: bold;}
-nav.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover
+nav.navbar-default .navbar-nav>li>a.active, .navbar-default .navbar-nav>li>a.active:focus, .navbar-default .navbar-nav>li>a.active:hover
 {background-color: #448B44; color: #fff;}
 nav.navbar-default .navbar-brand:focus, nav.navbar-default .navbar-brand:hover {color: #449d44;}
 
@@ -99,6 +99,11 @@ section.content ul.nav {margin-bottom: 20px;}
 section.content ul li {font-size: 16px}
 section.content ul.resources li {margin: 5px 0;}
 section.content #accordion {margin-top: 25px;}
-section.content form {margin: 5% 0;}
+section.content form {margin: 5% 0; position: relative;}
+section.content form .error {background-color: rgba(255, 0, 0, 0.2); border-color: red;}
+section.content form .thank-you {display: none;}
+section.content form.submitted .form-group {visibility: hidden;}
+section.content form.submitted .thank-you {border: 1px solid; display: block; position: absolute; top: 100px; text-align: center; visibility: visible; width: 100%;}
+section.content form.submitted .thank-you p {font-size: 22px;}
 @media (min-width: 767px) { section.content .address {text-align: center;} }
 @media (max-width: 480px) { section.content ul.nav li {float: none;} }

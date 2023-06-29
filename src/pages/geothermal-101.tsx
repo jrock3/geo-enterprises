@@ -2,6 +2,7 @@ import * as React from 'react'
 import type { HeadFC, PageProps } from 'gatsby'
 import { Link } from 'gatsby'
 import Layout from '../components/Layout'
+import { StaticImage } from 'gatsby-plugin-image'
 
 const AboutPage: React.FC<PageProps> = () => {
   return (
@@ -10,7 +11,7 @@ const AboutPage: React.FC<PageProps> = () => {
         <div className='container'>
             <div className='row'>
               <div className='col-md-10 col-md-offset-1'>
-                <img className='' src='/images/tree.jpg' style={{ width: '100%' }} />
+                <StaticImage src="../../static/images/tree.jpg" alt="" />
               </div>
             </div>
             <div className='row' style={{ paddingTop: '4%' }}>

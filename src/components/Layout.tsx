@@ -78,12 +78,12 @@ const Layout = ({ children }: LayoutProps) => {
           </div>
           <div className="collapse navbar-collapse" id="myNavbar">
             <ul className="nav navbar-nav navbar-right">
-              <li className="active"><Link to="/">Home</Link></li>
-              <li><Link to="/about">About Us</Link></li>
-              <li><Link to="/services">Services</Link></li>
-              <li><Link to="/geothermal-101">Geo 101</Link></li>
-              <li><a href="http://www.geo-depot.com">Store</a></li>  
-              <li><Link to="/contact">Contact</Link></li> 
+              <li><Link to="/" activeClassName="active">Home</Link></li>
+              <li><Link to="/about" activeClassName="active">About Us</Link></li>
+              <li><Link to="/services" activeClassName="active">Services</Link></li>
+              <li><Link to="/geothermal-101" activeClassName="active">Geo 101</Link></li>
+              <li><Link to="http://www.geo-depot.com" activeClassName="active">Store</Link></li>  
+              <li><Link to="/contact" activeClassName="active">Contact</Link></li> 
             </ul>
           </div>
         </div>
