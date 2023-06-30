@@ -106,6 +106,6 @@ const AboutPage: React.FC<PageProps> = () => {
   )
 }
 
-export const Head: HeadFC = () => <title>About Me</title>
+export const Head: HeadFC = () => <title>Contact</title>
 
 export default AboutPage
