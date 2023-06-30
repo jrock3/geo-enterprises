@@ -82,7 +82,7 @@ const Layout = ({ children }: LayoutProps) => {
               <li><Link to="/about" activeClassName="active">About Us</Link></li>
               <li><Link to="/services" activeClassName="active">Services</Link></li>
               <li><Link to="/geothermal-101" activeClassName="active">Geo 101</Link></li>
-              <li><Link to="http://www.geo-depot.com" activeClassName="active">Store</Link></li>  
+              <li><a href="http://www.geo-depot.com">Store</a></li>  
               <li><Link to="/contact" activeClassName="active">Contact</Link></li> 
             </ul>
           </div>

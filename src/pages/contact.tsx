@@ -1,29 +1,46 @@
 import * as React from 'react'
+import { useState } from 'react'
 import type { HeadFC, PageProps } from "gatsby"
 import Layout from '../components/Layout'
 import { StaticImage } from "gatsby-plugin-image"
 
 const AboutPage: React.FC<PageProps> = () => {
-  // create email validation function
+  const [state, setState] = useState({});
+  
+  const encode = (data: Record<string, string>) => {
+    return Object.keys(data)
+      .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+      .join('&')
+  };
   const validateEmail = (email: string) => {
     const re = /\S+@\S+\.\S+/;
     return re.test(email);
   };
+  const handleChange = (e: React.FormEvent) => {
+    const target = e.target as HTMLInputElement | HTMLTextAreaElement;
+    setState({ ...state, [target.name]: target.value })
+  }
   const handleSubmit = (e: React.FormEvent) => {
-    const form = document.querySelector('form');
-    if (!form) return;
+    e.preventDefault();
+    const form = e.target as HTMLFormElement;
     const formError = form.querySelector('.error');
     if (formError) formError.classList.remove('error');
     const formName = document.getElementById('name') as HTMLInputElement;
     const formEmail = document.getElementById('email') as HTMLInputElement;
     const formMsg = document.getElementById('message') as HTMLTextAreaElement;
-    const formHuman = document.getElementById('human') as HTMLInputElement;
-    if (!formName.value) formName.classList.add('error');
-    else if (!validateEmail(formEmail.value)) formEmail.classList.add('error');
-    else if (!formMsg.value) formMsg.classList.add('error');
-    else if (formHuman.value !== '5') formHuman.classList.add('error');
-    else return form.classList.add('submitted');
-    e.preventDefault();
+    if (!formName.value) return formName.classList.add('error');
+    else if (!validateEmail(formEmail.value)) return formEmail.classList.add('error');
+    else if (!formMsg.value) return formMsg.classList.add('error');
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        'form-name': form.getAttribute('name')!,
+        ...state,
+      }),
+    })
+      .then(() => form.classList.add('submitted'))
+      .catch((error) => alert(error))
   };
 
   return (
@@ -44,30 +61,24 @@ const AboutPage: React.FC<PageProps> = () => {
                 <div className="form-group">
                     <label htmlFor="name" className="col-sm-2 control-label">Name</label>
                     <div className="col-sm-10">
-                        <input type="text" className="form-control" id="name" name="name" placeholder="First & Last Name"/>
+                        <input type="text" className="form-control" id="name" name="name" onChange={handleChange} placeholder="First & Last Name"/>
                     </div>
                 </div>
                 <p hidden>
                   <label>
-                    Don't fill this out: <input name="bot-field" />
+                    Don't fill this out: <input name="bot-field" onChange={handleChange} />
                   </label>
                 </p>
                 <div className="form-group">
                     <label htmlFor="email" className="col-sm-2 control-label">Email</label>
                     <div className="col-sm-10">
-                        <input type="email" className="form-control" id="email" name="email" placeholder="example@domain.com"/>
+                        <input type="email" className="form-control" id="email" name="email" onChange={handleChange} placeholder="example@domain.com"/>
                     </div>
                 </div>
                 <div className="form-group">
                     <label htmlFor="message" className="col-sm-2 control-label">Message</label>
                     <div className="col-sm-10">
-                        <textarea className="form-control" rows={4} id="message" name="message"></textarea>
-                    </div>
-                </div>
-                <div className="form-group">
-                    <label htmlFor="human" className="col-sm-2 control-label">2 + 3 = ?</label>
-                    <div className="col-sm-10">
-                        <input type="text" className="form-control" id="human" name="human" placeholder="Your Answer"/>
+                        <textarea className="form-control" rows={4} id="message" name="message" onChange={handleChange}></textarea>
                     </div>
                 </div>
                 <div className="form-group">
