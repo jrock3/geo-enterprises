@@ -92,10 +92,10 @@ const AboutPage: React.FC<PageProps> = () => {
               </form> 
               <div className="row text-center">
                 <div className="col-sm-6">
-                  <p><span style={{ fontWeight: 'bold' }}>Main Offices</span><br />2660 N. Hwy 167<br />Catoosa, OK 74015<br />(918) 379-0193 Phone<br />(800)-994-0428 Toll Free<br />(918) 379-0471 Fax</p>
+                  <p><span style={{ fontWeight: 'bold' }}>Main Offices</span><br />2640 N. Hwy 167<br />Catoosa, OK 74015<br />(918) 625-2141 Phone<br /></p>
                 </div>
                 <div className="col-sm-6">
-                  <p><span style={{ fontWeight: 'bold' }}>Buffalo Offices</span><br />1919 N. Maple St.<br />Buffalo, MO 65622<br />(417) 345-7400 Phone<br />(417) 345-4255 Fax</p>
+                  <p><span style={{ fontWeight: 'bold' }}>Mailing Address</span><br />PO Box 250<br />Catoosa, OK 74015</p>
                 </div>
               </div>
             </div>

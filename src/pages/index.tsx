@@ -39,8 +39,8 @@ const IndexPage: React.FC<PageProps> = () => {
             <div className='col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-3 col-md-offset-0'>
               <i className='glyphicon glyphicon-usd'></i>
               <h3>Tax Credits</h3>
-              <p>Find out about tax credits offered for residents who install geothermal systems in their homes.</p>
-              <Link to="/tax-credits"><button type="button" className="btn btn-success">Read More</button></Link>
+              <p>Tax credits offered for residents who install geothermal systems in their homes.</p>
+              {/*<Link to="/tax-credits"><button type="button" className="btn btn-success">Read More</button></Link>*/}
             </div>
           </div>
         </div>

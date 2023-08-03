@@ -36,7 +36,7 @@ const AboutPage: React.FC<PageProps> = () => {
                     </div>
                     <div role="tabpanel" className="tab-pane" id="profile">
                       <ul style={ {marginTop: '15px'} }>
-                        <li><Link to='/tax-credits'>Tax Credits</Link></li><br />
+                        <li>Tax Credits</li><br />
                         <li>The most energy-efficient, environmentally clean, and cost-effective space conditioning system available, according to the Environmental Protection Agency.</li><br />
                         <li>EPA found that geothermal heat pumps can reduce energy consumption--and corresponding emissions--by over 40% compared to air source heat pumps and by over 70% compared to electric resistance heating with standard air-conditioning equipment. Combining geothermal with other energy-efficient measures, such as window or insulation upgrades, can increase these savings even further.</li><br />
                         <li>Geothermal  heat pumps use the Earth's energy storage capability to heat and cool buildings, and to provide hot water. The earth is a huge energy storage device that absorbs 47% of the sun's energy -- more than 500 times more energy than mankind needs every year -- in the form of clean, renewable energy. Geothermal heat pumps take this heat during the heating season at an efficiency approaching or exceeding 400%, and return it during the cooling season.</li><br />
