@@ -66,6 +66,7 @@ const Layout = ({ children }: LayoutProps) => {
 
   return (
     <>
+      <a href="#main" className="skip-to-main-content-link">Skip to main content</a>
       <nav className="navbar navbar-default navbar-fixed-top">
         <div className="container">
           <div className="navbar-header">
@@ -88,7 +89,7 @@ const Layout = ({ children }: LayoutProps) => {
           </div>
         </div>
       </nav>
-      <main>
+      <main id="main">
         {children}
       </main>
       <footer className="final">

@@ -11,7 +11,7 @@ const AboutPage: React.FC<PageProps> = () => {
         <div className='container'>
             <div className='row'>
               <div className='col-md-10 col-md-offset-1'>
-                <StaticImage src="../../static/images/schoen.jpg" alt="" />
+                <StaticImage src="../../static/images/schoen.jpg" alt="Phil Schoen at Bird's Nest Stadium" />
               </div>
             </div>
             <div className='row' style={{paddingTop: '4%'}}>

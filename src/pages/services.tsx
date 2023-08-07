@@ -10,7 +10,7 @@ const AboutPage: React.FC<PageProps> = () => {
         <div className='container'>
           <div className='row'>
             <div className='col-md-10 col-md-offset-1'>
-              <StaticImage src="../../static/images/install.jpg" alt="" />
+              <StaticImage src="../../static/images/install.jpg" alt="construction site with geo equipment" />
             </div>
           </div>
           <div className='row' style={{ paddingTop: '4%' }}>
