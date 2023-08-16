@@ -24,24 +24,24 @@ const IndexPage: React.FC<PageProps> = () => {
       <section className='info'>
         <div className='container'>
           <div className='row text-center features'>
-            <div className='col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-3 col-md-offset-0'>
+            <article className='col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-3 col-md-offset-0'>
               <i className='glyphicon glyphicon-briefcase'></i>
               <h3>Our Services</h3>
               <p>From training to design and installation, Geo-Enterprises provides quality service within the geothermal industry.</p>
               <Link to="/services"><button type="button" className="btn btn-success">Read More</button></Link>
-            </div>
-            <div className='col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-3 col-md-offset-0'>
+            </article>
+            <article className='col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-3 col-md-offset-0'>
               <i className='glyphicon glyphicon-refresh'></i>
               <h3>Geothermal 101</h3>
               <p>Learn how to utilize this virtually limitless source of energy to heat and cool your home or business.</p>
               <Link to="/geothermal-101"><button type="button" className="btn btn-success">Read More</button></Link>
-            </div>
-            <div className='col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-3 col-md-offset-0'>
+            </article>
+            <article className='col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-3 col-md-offset-0'>
               <i className='glyphicon glyphicon-usd'></i>
               <h3>Tax Credits</h3>
               <p>Tax credits offered for residents who install geothermal systems in their homes.</p>
               {/*<Link to="/tax-credits"><button type="button" className="btn btn-success">Read More</button></Link>*/}
-            </div>
+            </article>
           </div>
         </div>
       </section>

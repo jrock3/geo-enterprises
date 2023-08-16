@@ -66,29 +66,31 @@ const Layout = ({ children }: LayoutProps) => {
 
   return (
     <>
-      <a href="#main" className="skip-to-main-content-link">Skip to main content</a>
-      <nav className="navbar navbar-default navbar-fixed-top">
-        <div className="container">
-          <div className="navbar-header">
-            <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-              <span className="icon-bar"></span>
-              <span className="icon-bar"></span>
-              <span className="icon-bar"></span> 
-            </button>
-            <a className="navbar-brand" href="index.html">Geo-Enterprises</a>
+      <header>
+        <a href="#main" className="skip-to-main-content-link">Skip to main content</a>
+        <nav className="navbar navbar-default navbar-fixed-top" role="navigation">
+          <div className="container">
+            <div className="navbar-header">
+              <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span className="icon-bar"></span>
+                <span className="icon-bar"></span>
+                <span className="icon-bar"></span> 
+              </button>
+              <a className="navbar-brand" href="index.html">Geo-Enterprises</a>
+            </div>
+            <div className="collapse navbar-collapse" id="myNavbar">
+              <ul className="nav navbar-nav navbar-right">
+                <li><Link to="/" activeClassName="active">Home</Link></li>
+                <li><Link to="/about" activeClassName="active">About Us</Link></li>
+                <li><Link to="/services" activeClassName="active">Services</Link></li>
+                <li><Link to="/geothermal-101" activeClassName="active">Geo 101</Link></li>
+                <li><a href="http://www.geo-depot.com">Store</a></li>  
+                <li><Link to="/contact" activeClassName="active">Contact</Link></li> 
+              </ul>
+            </div>
           </div>
-          <div className="collapse navbar-collapse" id="myNavbar">
-            <ul className="nav navbar-nav navbar-right">
-              <li><Link to="/" activeClassName="active">Home</Link></li>
-              <li><Link to="/about" activeClassName="active">About Us</Link></li>
-              <li><Link to="/services" activeClassName="active">Services</Link></li>
-              <li><Link to="/geothermal-101" activeClassName="active">Geo 101</Link></li>
-              <li><a href="http://www.geo-depot.com">Store</a></li>  
-              <li><Link to="/contact" activeClassName="active">Contact</Link></li> 
-            </ul>
-          </div>
-        </div>
-      </nav>
+        </nav>
+      </header>
       <main id="main">
         {children}
       </main>

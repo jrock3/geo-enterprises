@@ -65,15 +65,15 @@ section.statement p {font-size: 18px; padding-top: 10px;}
 
 section.info {padding: 50px 0;}
 section.info .glyphicon {font-size: 36px}
-	div.features div {padding: 2%; border: 1px solid #ddd}
+	div.features article {padding: 2%; border: 1px solid #ddd}
 	/*div.features figure {height: 80px; background: url('../install.jpg') center center no-repeat; background-size: 100% 100%;}*/
 	div.features button {background-color: #448B44; margin-top: 5px;}
 @media (min-width: 992px) {
 	div.features p {height: 100px; overflow: hidden}
-	div.features div {margin: 0 4%; height: 300px;}
+	div.features article {margin: 0 4%; height: 300px;}
 }
 @media (max-width: 991px) {
-	div.features div {margin-bottom: 20px; padding: 5%;}
+	div.features article {margin-bottom: 20px; padding: 5%;}
 }
 
 section.store {

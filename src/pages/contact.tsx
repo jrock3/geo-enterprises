@@ -61,7 +61,7 @@ const AboutPage: React.FC<PageProps> = () => {
                 <div className="form-group">
                     <label htmlFor="name" className="col-sm-2 control-label">Name</label>
                     <div className="col-sm-10">
-                        <input type="text" className="form-control" id="name" name="name" onChange={handleChange} placeholder="First & Last Name"/>
+                        <input type="text" aria-required="true" className="form-control" id="name" name="name" onChange={handleChange} placeholder="First & Last Name"/>
                     </div>
                 </div>
                 <p hidden>
@@ -72,13 +72,13 @@ const AboutPage: React.FC<PageProps> = () => {
                 <div className="form-group">
                     <label htmlFor="email" className="col-sm-2 control-label">Email</label>
                     <div className="col-sm-10">
-                        <input type="email" className="form-control" id="email" name="email" onChange={handleChange} placeholder="example@domain.com"/>
+                        <input type="email" aria-required="true" className="form-control" id="email" name="email" onChange={handleChange} placeholder="example@domain.com"/>
                     </div>
                 </div>
                 <div className="form-group">
                     <label htmlFor="message" className="col-sm-2 control-label">Message</label>
                     <div className="col-sm-10">
-                        <textarea className="form-control" rows={4} id="message" name="message" onChange={handleChange}></textarea>
+                        <textarea aria-required="true" className="form-control" rows={4} id="message" name="message" onChange={handleChange}></textarea>
                     </div>
                 </div>
                 <div className="form-group">
