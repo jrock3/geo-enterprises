@@ -40,7 +40,7 @@ const IndexPage: React.FC<PageProps> = () => {
               <i className='glyphicon glyphicon-usd'></i>
               <h3>Tax Credits</h3>
               <p>Tax credits offered for residents who install geothermal systems in their homes.</p>
-              {/*<Link to="/tax-credits"><button type="button" className="btn btn-success">Read More</button></Link>*/}
+              <Link to="/tax-credits"><button type="button" className="btn btn-success">Read More</button></Link>
             </article>
           </div>
         </div>
