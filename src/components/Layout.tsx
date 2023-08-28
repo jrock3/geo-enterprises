@@ -76,7 +76,7 @@ const Layout = ({ children }: LayoutProps) => {
                 <span className="icon-bar"></span>
                 <span className="icon-bar"></span> 
               </button>
-              <a className="navbar-brand" href="index.html">Geo-Enterprises</a>
+              <a className="navbar-brand" href="/">Geo-Enterprises</a>
             </div>
             <div className="collapse navbar-collapse" id="myNavbar">
               <ul className="nav navbar-nav navbar-right">
